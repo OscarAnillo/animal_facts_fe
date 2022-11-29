@@ -1,8 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500;900&display=swap');
+
 * {
   margin: 0;
   padding: 0
 }
 
 .App {
+  font-family: 'Raleway', sans-serif;
   text-align: center;
+  position: relative;
+  height: 100vh;
+  background-image: url("https://w0.peakpx.com/wallpaper/942/413/HD-wallpaper-sea-wave-vector-water-graphics-illustration-sea-blue-wave-vector.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.animals {
+  width: 50%;
+  animation: animals 2s infinite ease;
+}
+.animal-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+}
+.app-title {
+  color: red;
+  font-weight: 900;
+  padding-bottom: .5em;
+  text-shadow: 1px 2px 3px rgb(96, 97, 97);
+}
+#fact {
+  font-weight: 500;
+  font-size: 1.1rem;
+  margin-bottom: .5em;
+}
+
+@keyframes animals {
+  0%   {position: relative; top: 5px;}
+  25%  {position: relative; top: 10px;}
+  50%  {position: relative; top: -10px;}
+  100% {position: relative; top: 5px;}
+}
+
+@media(min-width: 1000px) {
+  .animals {
+    width: 33%;
+  }
+  .animals:hover {
+    cursor: pointer;
+  }
+  
+  .app-title {
+    color: red;
+    font-size: 3rem;
+    font-weight: 900;
+    padding-bottom: .5em;
+  }
+
+  #fact {
+    font-weight: 500;
+    font-size: 1.3rem;
+  }
 }
